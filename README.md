@@ -1,23 +1,23 @@
-# LINE Things Starter - LIFF App
+# LINE Things Demo - Smart Lock(LIFF App)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+Reference engineering blog link: 
 
-This is the sample code of the LIFF App for LINE Things Starter.
-The code contains a LIFF application that will work with the Starter firmwares.
+This is the sample code of the LIFF App for Smart Lock demo.
 
 ## Setup
 
-Ensure you have already created a Developer Trial account and generated a service UUID.
-To configure the app, change the `USER_SERVICE_UUID` in `liff.js` to your generated service UUID.
+Please setup ESP32 with this repo: https://github.com/hazel-shen/Smart-Lock
 
-## Publish LIFF App using GitHub Pages
+## Publish LIFF App with Heroku deploy button
 
-The LIFF application included in this repository can also be hosted by using GitHub Pages. To host your LIFF app, perform the following:
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-1. Fork this repository on GitHub
-2. From GitHub Pages settings, select the "master branch" as the "Source"
-3. Set the URL of the published GitHub Pages page following with `liff-app/` as the LIFF endpoint URL.
-(For Example: https://line.github.io/line-things-starter/liff-app/)
+How to deploy
+
+1. Click the button.
+2. Input the LINE Notify access token, the unlock URL with heroku app URL(e.g. https://demo-line-things.herokuapp.com/unlock), and user service UUID
+3. Deploy the app.
+4. Remember to create a liff app with your heroku app URL.
 
 ## Reference
 
