@@ -1,5 +1,7 @@
 # LINE Things Starter - LIFF App
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hazel-shen/Smart-Lock-LIFF))
+
 This is the sample code of the LIFF App for LINE Things Starter.
 The code contains a LIFF application that will work with the Starter firmwares.
 
