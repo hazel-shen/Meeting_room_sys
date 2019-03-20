@@ -1,0 +1,7 @@
+{
+  "name": "Smart Lock LIFF Sample",
+  "description": "LIFF part of smart lock",
+  "repository": "https://github.com/hazel-shen/Smart-Lock-LIFF",
+  "logo": "https://avatars1.githubusercontent.com/u/39440522?s=460&v=4",
+  "keywords": ["node", "express", "static"]
+}
