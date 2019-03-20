@@ -3,5 +3,27 @@
   "description": "LIFF part of smart lock",
   "repository": "https://github.com/hazel-shen/Smart-Lock-LIFF",
   "logo": "https://avatars1.githubusercontent.com/u/39440522?s=460&v=4",
-  "keywords": ["node", "express", "static"]
+  "keywords": ["LINE", "LIFF", "javaScript", "IoT", "Smart Lock"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "UNLOCK_API": {
+      "description": "unlock API url",
+      "required": true
+    },
+    "USER_SERVICE_UUID": {
+      "description": "user service UUID",
+      "required": true
+    },
+    "ACCESS_TOKEN": {
+      "description": "LINE Notify access token",
+      "required": true
+    }
+  }
 }
