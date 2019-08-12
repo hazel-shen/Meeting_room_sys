@@ -20,25 +20,29 @@
     <hr />
     <p>
       <img id="loading-animation" class="" src="loading.gif" height="14px" />
-      <span id="status" class="inactive">Device disconnected</span>
+      <span id="status" class="inactive">尚未報到</span>
     </p>
     <hr />
-    使用者名稱： <span id="userName"></span>
-    <img src=""
-          hidden="true"
-          id="userPic"
-          style="width:200px; height: 200px;"
-          alt="Italian Trulli">
-    <div id="controls" class="hidden">
+    <div id="controls">
       <!-- Device Info Table -->
       <table class="device-info-table" >
-        <tr hidden="true">
-          <th class="device-info-cell device-info-key" >Name</th>
+        <tr>
+            <th class="device-info-cell device-info-key">使用者名稱</th>
+            <td class="device-info-cell device-info-val" id="userName"></td>
+          </tr>
+        <tr>
+            <th class="device-info-cell device-info-key">使用者頭像</th>
+            <td class="device-info-cell device-info-val">
+              <img src=""
+                    hidden="true"
+                    id="userPic"
+                    style="width:200px; height: 200px;"
+                    alt="Italian Trulli">
+            </td>
+          </tr>
+        <tr>
+          <th class="device-info-cell device-info-key" >會議室</th>
           <td class="device-info-cell device-info-val" id="device-name"></td>
-        </tr>
-        <tr hidden="true">
-          <th class="device-info-cell device-info-key">ID</th>
-          <td class="device-info-cell device-info-val" id="device-id"></td>
         </tr>
         <tr hidden="true">
           <th class="device-info-cell device-info-key">PSDI</th>
@@ -50,7 +54,7 @@
             <button id="btn-state" class="btn btn-state" disabled>Released</button>
           </td>
         </tr>
-        <tr hidden="true">
+        <tr>
           <th class="device-info-cell device-info-key">Click count</th>
           <td class="device-info-cell device-info-val" id="click-count">0</td>
         </tr>

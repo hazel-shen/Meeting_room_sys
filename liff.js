@@ -89,7 +89,7 @@ function uiToggleDeviceConnected(connected) {
         // Show status connected
         elStatus.classList.remove("inactive");
         elStatus.classList.add("success");
-        elStatus.innerText = "Device connected";
+        elStatus.innerText = "您已報到";
         // Show controls
         elControls.classList.remove("hidden");
     } else {
@@ -98,7 +98,7 @@ function uiToggleDeviceConnected(connected) {
         // Show status disconnected
         elStatus.classList.remove("success");
         elStatus.classList.add("inactive");
-        elStatus.innerText = "Device disconnected";
+        elStatus.innerText = "尚未報到";
         // Hide controls
         elControls.classList.add("hidden");
     }
@@ -187,7 +187,7 @@ function liffRequestDevice() {
 function liffConnectToDevice(device) {
     device.gatt.connect().then(() => {
         document.getElementById("device-name").innerText = device.name;
-        document.getElementById("device-id").innerText = device.id;
+        // document.getElementById("device-id").innerText = device.id;
 
         // Show status connected
         uiToggleDeviceConnected(true);
@@ -266,8 +266,12 @@ function liffGetButtonStateCharacteristic(characteristic) {
     // (Get notified when button state changes)
     characteristic.startNotifications().then(() => {
         characteristic.addEventListener('characteristicvaluechanged', e => {
-            const val = (new Uint8Array(e.target.value.buffer))[0];
-            if (val > 0) {
+            const str = (new Uint8Array(e.target.value.buffer));
+            var eventStr = new TextDecoder("utf-8").decode(str);
+            console.log(eventStr)
+            var device = JSON.parse(eventStr).device;
+            console.log(device)
+            if (device != null || device > 0) {
                 // press
                 uiToggleStateButton(true);
             } else {
