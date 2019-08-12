@@ -26,10 +26,10 @@ window.onload = () => {
 // ----------------- //
 // Handler functions //
 // ----------------- //
-function handlerToggleLed() {
+function handlerToggleMeetingRoom() {
     ledState = !ledState;
 
-    uiToggleLedButton(ledState);
+    uiToggleMeetingRoomButton(ledState);
     liffToggleDeviceLedState(ledState);
     axios.post(process.env.UNLOCK_API, {
           userName: window.displayName,
@@ -45,9 +45,9 @@ function handlerToggleLed() {
 // UI functions //
 // ------------ //
 
-function uiToggleLedButton(state) {
-    const el = document.getElementById("btn-led-toggle");
-    el.innerText = state ? "開鎖" : "鎖門";
+function uiToggleMeetingRoomButton(state) {
+    const el = document.getElementById("btn-meetingroom-toggle");
+    el.innerText = state ? "釋放會議室" : "訂此間會議室";
 
     if (state) {
       el.classList.add("led-on");
@@ -84,8 +84,8 @@ function uiToggleDeviceConnected(connected) {
     if (connected) {
         // Hide loading animation
         uiToggleLoadingAnimation(false);
-        const btn_led = document.getElementById("btn-led-toggle")
-        btn_led.addEventListener("click", handlerToggleLed )
+        const btn_meetingroom = document.getElementById("btn-meetingroom-toggle")
+        btn_meetingroom.addEventListener("click", handlerToggleMeetingRoom )
         // Show status connected
         elStatus.classList.remove("inactive");
         elStatus.classList.add("success");

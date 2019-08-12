@@ -18,10 +18,10 @@ p {
     display: inline-block;
 }
 
-.btn-led-toggle {
+.btn-meetingroom-toggle {
     box-shadow: 0 4pt 8pt 0 rgba(0,0,0,0.2), 0 3pt 10pt 0 rgba(0,0,0,0.19);
     color: #f8f9fa; /* Light */
-    background-color: #6c757d; /* Gray */
+    background-color: pink; /* pink */
     width: 160pt;
     font-weight: bold;
     height: 40pt;
@@ -29,10 +29,10 @@ p {
     border-radius: 8pt;
 }
 
-.btn-led-toggle:active {
+.btn-meetingroom-toggle:active {
     transform: translateY(4pt);
     box-shadow: 0 2pt 4pt 0 rgba(0,0,0,0.2), 0 1pt 5pt 0 rgba(0,0,0,0.19);
-    background-color: #6c757d; /* Gray */
+    background-color: #FA8072; /* dark pink */
 }
 
 .led-on, .led-on:active {
