@@ -22,7 +22,7 @@ And Sparkfun GridEye example code: https://github.com/sparkfun/SparkFun_GridEYE_
 4. Turn on your LINE APP, scan this QRCode to enable LINE Things
 <br>![](https://developers.line.biz/media/line-things/qr_code-311f3503.png)<br>
 5. And then you can see your device on LINE Things list
-<br><img style="width:200px;" src="https://i.imgur.com/PPItSDD.png"><br>
+<br><img src="https://i.imgur.com/PPItSDD.png" alt="Kitten" title="A cute kitten" width="250"/> <br>
 
 
 ## Reference
