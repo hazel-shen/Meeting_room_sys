@@ -22,24 +22,5 @@ app.get('/', (req, res) => {
   res.sendStatus(200).render(path.join(__dirname + '/dist/index.html'))
 })
 
-app.post('/unlock', (req, res) => {
-  console.log(process.env.ACCESS_TOKEN)  
-  let userName = req.body.userName
-  axios.post('https://notify-api.line.me/api/notify', 'message=' +  userName + ' 正在開門', {
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded', 
-      'Authorization': process.env.ACCESS_TOKEN
-      //Please replace this access token to yours
-    }
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-
-
-})
 
 app.listen(process.env.PORT || 8000)
